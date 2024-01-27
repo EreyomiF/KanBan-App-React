@@ -1,10 +1,11 @@
-import Dropdown from '../Components/DropDown';
+import NavBar from '../Components/NavBar';
 
 function App() {
   return (
-    
-      <Dropdown />
-  );
+    <>
+      <NavBar />
+    </>
+ );
 }
 
 export default App;
