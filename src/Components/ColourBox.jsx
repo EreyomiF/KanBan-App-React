@@ -1,4 +1,3 @@
-// GradientContainer.js
 
 import React from 'react';
 

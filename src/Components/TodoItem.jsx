@@ -1,8 +1,6 @@
-// TodoItem.js
 import React from 'react';
 
 function getRandomColor() {
-  // Generate a random hex color code
   return '#' + Math.floor(Math.random()*16777215).toString(16);
 }
 
@@ -11,7 +9,6 @@ function TodoItem({ title, body }) {
 
   const cardStyle = {
     backgroundColor: backgroundColor,
-    // Add other styles as needed
   };
 
   return (

@@ -42,7 +42,7 @@ const AddTask = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                New Task
+                New task
               </a>
             </li>
             <li>
@@ -50,7 +50,7 @@ const AddTask = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Ongoing Task
+                Ongoing task
               </a>
             </li>
             <li>
@@ -58,7 +58,7 @@ const AddTask = () => {
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
-                Completed Task
+                Completed task
               </a>
             </li>
             <li>

@@ -21,13 +21,10 @@ const TodoInput = () => {
   
 
       const addItem = () => {
-        // Create a new item object
         const newItem = { title: titleInput, body: bodyInput };
       
-        // Update the state
         setItems((prevItems) => [...prevItems, newItem]);
       
-        // Clear the input fields
         setTitleInput("");
         setBodyInput("");
       };
