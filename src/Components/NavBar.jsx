@@ -5,6 +5,7 @@ import Picture from '../assets/images/profilepics2.jpeg';
 import TodoInput from './TodoInput';
 import AddTask from './AddTask';
 import TodoHeader from './TodoHeader'
+import TimeHeader from './TimeHeader';
 
 
 function NavBar() {
@@ -214,6 +215,7 @@ aria-label="Sidebar"
 </aside>
 <div className="p-4 sm:ml-64">
 <AddTask />
+<TimeHeader />
 <TodoHeader />
 <TodoInput />
 </div>
