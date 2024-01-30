@@ -3,7 +3,9 @@ import '../index.css';
 import Coffee from '../assets/icons/coffee-gif-15.gif';
 import Picture from '../assets/images/profilepics2.jpeg';
 import TodoInput from './TodoInput';
-import TodoHeader from './TodoHeader';
+import AddTask from './AddTask';
+import TodoHeader from './TodoHeader'
+
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -211,6 +213,7 @@ aria-label="Sidebar"
 </div>
 </aside>
 <div className="p-4 sm:ml-64">
+<AddTask />
 <TodoHeader />
 <TodoInput />
 </div>

@@ -1,58 +1,30 @@
 import React from 'react';
-import Chick from "../assets/icons/chick.png";
-import Jackpot from "../assets/icons/jackpot.png";
-import Unicorn from "../assets/icons/unicorn-clipart-transparent-20.png";
+import ImageComponent from './ImageComponent';
+import chick from '../assets/icons/chick.png';
+import Unicorn from '../assets/icons/unicorn-clipart-transparent-20.png';
+import jackpot from '../assets/icons/jackpot.png';
 
-const TodoHeader = () => {
+const GridWithBoxes = () => {
   return (
-    <div className="p-2 mb-4 rounded-lg mt-14">
-      <div className="grid grid-cols-3 gap-4">
-        <button
-          type="button"
-          className="flex items-center justify-center text-gray-900 font-medium bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-lg px-8 py-4 text-center me-2 mb-2"
-        >
-          <div className="flex items-center">
-            <img 
-              src={Chick}
-              alt="user photo"
-              aria-hidden="true"
-              className="w-8 h-7 me-2 -ms-1"
-            />
-            <span className="leading-tight">New</span>
-          </div>
-        </button>
-        <button
-          type="button"
-          className="flex items-center font-medium justify-center text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-lg px-8 py-4 me-2 mb-2"
-        >
-          <div className="flex items-center">
-            <img 
-              src={Unicorn}
-              alt="user photo"
-              aria-hidden="true"
-              className="w-12 h-12 me-2 -ms-1"
-            />
-            
-            <span className="leading-tight">In progress</span>
-          </div>
-        </button>
-        <button
-          type="button"
-          className="flex items-center font-medium justify-center text-gray-900 bg-gradient-to-r from-teal-200 to-lime-200 hover:bg-gradient-to-l hover:from-teal-200 hover:to-lime-200 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-teal-700 font-medium rounded-lg text-lg px-8 py-4 me-2 mb-2"
-        >
-          <div className="flex items-center">
-            <img 
-              src={Jackpot}
-              alt="user photo"
-              aria-hidden="true"
-              className="w-10 h-10 me-2 -ms-1"
-            />
-            <span className="leading-tight">Complete</span>
-          </div>
-        </button>
+    <div className="p-2 mb-4 rounded-lg mt-10">
+      <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="flex flex-col items-center justify-center text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
+          <ImageComponent src={chick} alt="Add Up" className="w-6 h-6 mb-2" />
+          <span className="leading-tight">New</span>
+        </div>
+
+        <div className="flex flex-col items-center justify-center text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800">
+          <ImageComponent src={Unicorn} alt="Chick" className="w-10 h-10 mb-1" />
+          <span className="leading-tight">Ongoing</span>
+        </div>
+
+        <div className="flex flex-col items-center justify-center text-purple-700 hover:text-white border border-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2 dark:border-purple-400 dark:text-purple-400 dark:hover:text-white dark:hover:bg-purple-500 dark:focus:ring-purple-900">
+          <ImageComponent src={jackpot} alt="Unicorn" className="w-9 h-9 mb-1" />
+          <span className="leading-tight">Completed</span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default TodoHeader;
+export default GridWithBoxes;
