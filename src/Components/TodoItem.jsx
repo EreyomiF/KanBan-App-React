@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function getRandomColor() {
-  return '#' + Math.floor(Math.random()*16777215).toString(16);
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }
 
 function TodoItem({ title, body }) {
   const backgroundColor = getRandomColor();
+
+  useEffect(() => {
+    console.log('Generated color:', backgroundColor);
+  }, [backgroundColor]);
 
   const cardStyle = {
     backgroundColor: backgroundColor,
   };
 
   return (
-    <div style={cardStyle} className="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm p-6 border border-gray-200 rounded-lg shadow dark:border-gray-700" style={cardStyle}>
       <a href="#">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
       </a>

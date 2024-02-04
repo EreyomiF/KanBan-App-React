@@ -1,20 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ImageComponent from './ImageComponent';  
 import Collection from '../assets/icons/collection-fill.svg';
 import Bell from '../assets/icons/bell-fill.svg';
 import Geo from '../assets/icons/geo-alt-fill.svg';
 
 function TimeHeader() {
-    setInterval(updateTime, 1000);
+  const [time, setTime] = useState(getFormattedTime);
 
-    const now = new Date().toLocaleTimeString();
-  
-    const [time, setTime] = useState(now);
-  
-    function updateTime() {
-      const newTime = new Date().toLocaleTimeString();
-      setTime(newTime);
-    }
+  useEffect(() => {
+    const intervalId = setInterval(updateTime, 1000);
+
+    // Cleanup the interval when the component is unmounted
+    return () => clearInterval(intervalId);
+  }, []); // Empty dependency array ensures the effect runs only once after initial render
+
+  function getFormattedTime() {
+    return new Date().toLocaleTimeString();
+  }
+
+  function updateTime() {
+    const newTime = getFormattedTime();
+    setTime(newTime);
+  }
   
   return (
     <div className="p-2 mb-4 rounded-lg mt-20"> 

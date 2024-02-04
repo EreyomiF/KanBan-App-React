@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import '../index.css';
 import Coffee from '../assets/icons/coffee-gif-15.gif';
 import Picture from '../assets/images/profilepics2.jpeg';
-import TodoInput from './TodoInput';
 import AddTask from './AddTask';
-import TodoHeader from './TodoHeader'
-import TimeHeader from './TimeHeader';
-
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -215,9 +211,6 @@ aria-label="Sidebar"
 </aside>
 <div className="p-4 sm:ml-64">
 <AddTask />
-<TimeHeader />
-<TodoHeader />
-<TodoInput />
 </div>
     </>
   );
