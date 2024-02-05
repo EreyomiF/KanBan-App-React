@@ -3,6 +3,8 @@ import '../index.css';
 import Coffee from '../assets/icons/coffee-gif-15.gif';
 import Picture from '../assets/images/profilepics2.jpeg';
 import AddTask from './AddTask';
+import ThemeToggle from './ThemeToggle';
+
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -56,11 +58,12 @@ function NavBar() {
             Cup of Purity
           </span>
         </a>
+        <ThemeToggle />
       </div>
       <div className="relative">
       <div className="flex items-center ms-3">
-        <div className="relative inline-block text-left">
-          {/* Button to toggle user menu */}
+x          {/* Button to toggle user menu */}
+          <div className="relative inline-block text-left">
           <button
             type="button"
             className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -83,7 +86,7 @@ function NavBar() {
                   Ereyomi F perosolami 💜💙
                 </p>
                 <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                  ereyomifunmilola1998@yahoo.com 
+                  perosolami@yahoo.com 
                 </p>
               </div>
               <ul className="py-1" role="menu">

@@ -30,14 +30,14 @@ const TodoInput = ({ onAddTask, onCloseModal }) => {
                     htmlFor="name"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Name
+                    Title
                   </label>
                   <input
                     type="text"
                     name="name"
                     id="name"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                    placeholder="Type product name"
+                    placeholder="Type Task name"
                     required
                     value={titleInput}
                     onChange={handleTitleChange}
@@ -49,7 +49,7 @@ const TodoInput = ({ onAddTask, onCloseModal }) => {
                     htmlFor="price"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Price
+                  Number 
                   </label>
                   <input
                     type="number"
@@ -97,7 +97,7 @@ const TodoInput = ({ onAddTask, onCloseModal }) => {
                     onChange={handleBodyChange}
                     type="text"
                     id="small-input"
-                   placeholder="e.g go to the market tommorrow to get some milk"
+                   placeholder="e.g fix company A code tomorrow"
                   ></textarea>
                 </div>
               </div>
