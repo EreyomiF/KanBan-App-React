@@ -48,7 +48,7 @@ function NavBar() {
             ></path>
           </svg>
         </button>
-        <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+        <a href="https://www.linkedin.com/in/funmilola-ereyomi-a88026268/" className="flex ms-2 md:me-24">
           <img
             src={Coffee}
             className="h-8 me-3"
@@ -58,11 +58,14 @@ function NavBar() {
             Cup of Purity
           </span>
         </a>
-        <ThemeToggle />
+<div className="flex justify-end">
+        <ThemeToggle 
+         />
+        </div>
       </div>
       <div className="relative">
       <div className="flex items-center ms-3">
-x          {/* Button to toggle user menu */}
+         {/* Button to toggle user menu */}
           <div className="relative inline-block text-left">
           <button
             type="button"
