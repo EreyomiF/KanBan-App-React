@@ -3,8 +3,6 @@ import '../index.css';
 import Coffee from '../assets/icons/coffee-gif-15.gif';
 import Picture from '../assets/images/profilepics2.jpeg';
 import AddTask from './AddTask';
-import ThemeToggle from './ThemeToggle';
-
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -20,9 +18,8 @@ function NavBar() {
       };
       return (
 
-    <>
-
-<nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<>
+  <nav className="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
   <div className="px-3 py-3 lg:px-5 lg:pl-3">
     <div className="flex items-center justify-between">
       <div className="flex items-center justify-start rtl:justify-end">
@@ -58,11 +55,7 @@ function NavBar() {
             Cup of Purity
           </span>
         </a>
-<div className="flex justify-end">
-        <ThemeToggle 
-         />
         </div>
-      </div>
       <div className="relative">
       <div className="flex items-center ms-3">
          {/* Button to toggle user menu */}
@@ -80,59 +73,61 @@ function NavBar() {
               alt="user photo"
             />
           </button>
-
+         </div>
+         </div>
           {/* User menu dropdown */}
           {isUserMenuOpen && (
-            <div className="absolute right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600">
-              <div className="px-4 py-3" role="none">
-                <p className="text-sm text-gray-900 dark:text-white" role="none">
-                  Ereyomi F perosolami 💜💙
-                </p>
-                <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
-                  perosolami@yahoo.com 
-                </p>
-              </div>
-              <ul className="py-1" role="menu">
-              <li>
-              <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
-                    role="menuitem"
-                  >
-                  Dashboard
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                  Settings
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                  Earnings
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                  Sign out
-                </a>
-              </li>
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
+  <div className="absolute right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600">
+    <div className="px-4 py-3" role="none">
+      <p className="text-sm text-gray-900 dark:text-white" role="none">
+        Ereyomi F perosolami 💜💙
+      </p>
+      <p className="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">
+        perosolami@yahoo.com 
+      </p>
     </div>
+    <ul className="py-1" role="menu">
+      <li>
+        <a
+          href="#"
+          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+          role="menuitem"
+        >
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+          Settings
+        </a>
+      </li>
+      <li>
+        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+          Earnings
+        </a>
+      </li>
+    </ul>
+    {/* Sign Out item */}
+    <div className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white">
+      <a href="#">
+        Sign Out
+      </a>
     </div>
   </div>
+)}
+</div>
+      
+</div>
+ </div>
+  
 </nav>
 
 <aside
-id="logo-sidebar"
-className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${
-  sidebarVisible ? "translate-x-0" : "-translate-x-full"
-} bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
-aria-label="Sidebar"
+  id="logo-sidebar"
+  className={`fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform ${
+    sidebarVisible ? "translate-x-0" : "-translate-x-full"
+  } bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+  aria-label="Sidebar"
 >
 <div className="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
   <ul className="space-y-2 font-medium">
@@ -215,7 +210,7 @@ aria-label="Sidebar"
   </ul>
 </div>
 </aside>
-<div className="p-4 sm:ml-64">
+  <div className="p-4 sm:ml-64">
 <AddTask />
 </div>
     </>
