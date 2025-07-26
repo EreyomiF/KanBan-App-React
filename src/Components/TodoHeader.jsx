@@ -1,4 +1,4 @@
-import React from 'react';
+{/* import React from 'react';
 import ImageComponent from './ImageComponent';
 import chick from '../assets/icons/chick.png';
 import Unicorn from '../assets/icons/unicorn-clipart-transparent-20.png';
@@ -27,4 +27,4 @@ const GridWithBoxes = () => {
   );
 };
 
-export default GridWithBoxes;
+export default GridWithBoxes;  */}
