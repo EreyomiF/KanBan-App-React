@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../index.css';
-import Coffee from '../assets/icons/coffee-gif-15.gif';
 import Picture from '../assets/images/profilepics2.jpeg';
 import AddTask from './AddTask';
 import TodoNav from './TodoNav';
@@ -47,7 +46,7 @@ function NavBar() {
                 >
                   <div className="flex items-center justify-center h-24 w-24 me-4 -mt-8">
                     <img
-                      src={Coffee}
+                      src={}
                       className="max-h-full max-w-full"
                       alt="Logo"
                     />
