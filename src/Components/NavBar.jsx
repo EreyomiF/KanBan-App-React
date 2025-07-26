@@ -44,20 +44,13 @@ function NavBar() {
                   href="#"
                   className="flex items-center ms-2 md:me-10 -ml-6"
                 >
-                  <div className="flex items-center justify-center h-24 w-24 me-4 -mt-8">
-                    <img
-                      src={}
-                      className="max-h-full max-w-full"
-                      alt="Logo"
-                    />
-                  </div>
                 </a>
 
                 <a
                   href="#"
                   className="flex items-center"
                 >
-                  <div className="text-2xl font-bold mt-2 -ml-6 uppercase tracking-wide text-white">
+                  <div className="text-2xl font-bold mt-2 ml-16 uppercase tracking-wide text-white">
                     PROJECT MANAGEMENT HUB
                   </div>
                 </a>
