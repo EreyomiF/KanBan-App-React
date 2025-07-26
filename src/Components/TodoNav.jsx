@@ -3,7 +3,7 @@ import React from "react";
 const TodoNav = () => {
   return (
     <div>
-      <nav className="bg-black border-gray-200 dark:bg-gray-900 -mt-8">
+      <nav className="bg-black border-gray-200 dark:bg-gray-900 -mt-4">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
           <a
             href="#"

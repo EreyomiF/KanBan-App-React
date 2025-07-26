@@ -3,6 +3,7 @@ import '../index.css';
 import Picture from '../assets/images/profilepics2.jpeg';
 import AddTask from './AddTask';
 import TodoNav from './TodoNav';
+import MyIcon from '../assets/icons/coffee-gif-15.gif'
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -18,7 +19,7 @@ function NavBar() {
       };
       return (
         <>
-        <nav className="relative z-50 w-full ">
+        <nav className="relative z-50 w-full top-0 ">
           <div className="px-3 py-3 lg:px-5 lg:pl-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center justify-start rtl:justify-end">
@@ -135,13 +136,27 @@ function NavBar() {
           </div>
           <aside
             id="logo-sidebar"
-            className={`fixed top-0 left-0 z-40 w-20 h-screen pt-20 transition-transform ${
+            className={`fixed top-0 left-0 z-40 w-20 h-screen pt-0 transition-transform ${
               sidebarVisible ? "translate-x-0" : "-translate-x-full"
             } bg-black border-r border-purple-300 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
             aria-label="Sidebar"
           >
             <div className="h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-gray-800">
               <ul className="space-y-2 font-medium">
+                              <li>
+                  <a
+                    href="#"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  >
+                  <img
+                    src={MyIcon}
+                    alt="Icon"
+                    className="w-8 h-8 object-contain transition duration-75 group-hover:brightness-125"
+                  />
+                    <span className="ms-3"></span>
+                  </a>
+                </li>
+
                 <li>
                   <a
                     href="#"
