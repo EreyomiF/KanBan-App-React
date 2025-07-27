@@ -3,7 +3,8 @@ import '../index.css';
 import Picture from '../assets/images/profilepics2.jpeg';
 import AddTask from './AddTask';
 import TodoNav from './TodoNav';
-import MyIcon from '../assets/icons/coffee-gif-15.gif'
+import Coffee from '../assets/icons/coffee.gif';
+
 
 function NavBar() {
     const [sidebarVisible, setSidebarVisible] = React.useState(false);
@@ -19,50 +20,46 @@ function NavBar() {
       };
       return (
         <>
-        <nav className="relative z-50 w-full top-0 ">
-          <div className="px-3 py-3 lg:px-5 lg:pl-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center justify-start rtl:justify-end">
-                <button
-                  className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                  onClick={toggleSidebar}
-                >
-                  <span className="sr-only">Toggle sidebar</span>
-                  <svg
-                    className="w-6 h-6"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
+          <nav class="fixed top-0 z-50 w-full  h-12 sm:h-16 md:h-20">
+            <div class="px-3 py-3 lg:px-5 lg:pl-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start rtl:justify-end">
+                  <button
+                    className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    data-dropdown-toggle="dropdown-user"
+                    aria-controls="dropdown-user"
+                    type="button"
+                    onClick={toggleSidebar}
                   >
-                    <path
-                      clipRule="evenodd"
-                      fillRule="evenodd"
-                      d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-                    />
-                  </svg>
-                </button>
-
-                <a
-                  href="#"
-                  className="flex items-center ms-2 md:me-10 -ml-6"
-                >
-                </a>
-
-                <a
-                  href="#"
-                  className="flex items-center"
-                >
-                  <div className="text-2xl font-bold mt-2 ml-16 uppercase tracking-wide text-white">
-                    PROJECT MANAGEMENT HUB
-                  </div>
-                </a>
-              </div>
+                    <span className="sr-only"></span>
+                    <svg
+                      className="w-6 h-6"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clipRule="evenodd"
+                        fillRule="evenodd"
+                        d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+                      ></path>
+                    </svg>
+                  </button>
+                  <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+                    <img src={Coffee} class="h-8 me-3" alt="FlowBite Logo" />
+                    <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
+                      Project Management App
+                    </span>
+                  </a>
+                </div>
                 <div className="relative">
                   <div className="flex items-center ms-3">
                     {/* Button to toggle user menu */}
                     <div className="relative inline-block text-left">
                       <button
                         type="button"
-                        className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        className="flex text-sm  rounded-full focus:ring-4 "
                         aria-expanded={isUserMenuOpen}
                         onClick={toggleUserMenu}
                       >
@@ -77,16 +74,16 @@ function NavBar() {
                   </div>
                   {/* User menu dropdown */}
                   {isUserMenuOpen && (
-                    <div className="absolute right-0 mt-2 text-base list-none bg-black divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600">
+                    <div className="absolute right-0 mt-2 text-base list-none bg-black divide-y divide-gray-400 rounded shadow dark:bg-gray-700 dark:divide-gray-600">
                       <div className="px-4 py-3" role="none">
                         <p
-                          className="text-sm text-gray-900 dark:text-white"
+                          className="text-sm text-gray-200 dark:text-white"
                           role="none"
                         >
                           Ereyomi F perosolami 💜💙
                         </p>
                         <p
-                          className="text-sm font-medium text-gray-900 truncate dark:text-gray-300"
+                          className="text-sm font-medium text-gray-200 truncate dark:text-gray-300"
                           role="none"
                         >
                           Example@yahoo.com
@@ -96,7 +93,7 @@ function NavBar() {
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                             role="menuitem"
                           >
                             Dashboard
@@ -105,7 +102,7 @@ function NavBar() {
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                             role="menuitem"
                           >
                             Settings
@@ -114,7 +111,7 @@ function NavBar() {
                         <li>
                           <a
                             href="#"
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
+                            className="block px-4 py-2 text-sm text-gray-400 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                             role="menuitem"
                           >
                             Earnings
@@ -122,7 +119,7 @@ function NavBar() {
                         </li>
                       </ul>
                       {/* Sign Out item */}
-                      <div className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white">
+                      <div className="px-4 py-2 text-sm text-gray-400 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white">
                         <a href="#">Sign Out</a>
                       </div>
                     </div>
@@ -131,39 +128,23 @@ function NavBar() {
               </div>
             </div>
           </nav>
-          <div>
-            <TodoNav />
-          </div>
+          <div></div>
           <aside
             id="logo-sidebar"
-            className={`fixed top-0 left-0 z-40 w-20 h-screen pt-0 transition-transform ${
+            className={`fixed top-0 left-0 z-40 w-20 h-screen pt-20 transition-transform ${
               sidebarVisible ? "translate-x-0" : "-translate-x-full"
-            } bg-black border-r border-purple-300 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700`}
+            } bg-black  sm:translate-x-0 shadow-md `}
             aria-label="Sidebar"
           >
             <div className="h-full px-3 pb-4 overflow-y-auto bg-black dark:bg-gray-800">
               <ul className="space-y-2 font-medium">
-                              <li>
-                  <a
-                    href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-                  >
-                  <img
-                    src={MyIcon}
-                    alt="Icon"
-                    className="w-8 h-8 object-contain transition duration-75 group-hover:brightness-125"
-                  />
-                    <span className="ms-3"></span>
-                  </a>
-                </li>
-
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 group"
                   >
                     <svg
-                      className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -178,10 +159,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -196,10 +177,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -212,10 +193,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -228,10 +209,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-purple-400 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -244,10 +225,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-purple-400 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-purple-400 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -266,10 +247,10 @@ function NavBar() {
                 <li>
                   <a
                     href="#"
-                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                    className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-purple-200 dark:hover:bg-gray-700 group"
                   >
                     <svg
-                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                      className="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-purple-400 group-hover:text-gray-900 dark:group-hover:text-white"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -284,9 +265,6 @@ function NavBar() {
               </ul>
             </div>
           </aside>
-          <div className="ml-20 px-8 py-8">
-            <AddTask />
-          </div>
         </>
       );
 }

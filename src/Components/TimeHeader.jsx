@@ -65,7 +65,7 @@ function TimeHeader() {
   }
 
   return (
-    <div className="p-2 mb-4 rounded-lg mt-20">
+    <div className="p-2 mb-4 rounded-lg mt-20 ">
       <div className="flex flex-row-reverse gap-4 items-center">
         <div className="flex items-center">
           <svg className="w-6 h-6 text-white dark:text-white" fill="none" viewBox="0 0 24 24">
