@@ -17,7 +17,7 @@ const TodoInsight = () => {
   }, []);
 
   return (
-    <div className="h-[450px] w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6 relative">
+    <div className="h-[430px] mt-4 w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6 relative">
       {/* Header */}
       <div className="flex justify-between mb-3">
         <div className="flex items-center">
