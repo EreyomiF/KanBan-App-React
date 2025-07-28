@@ -37,35 +37,35 @@ function TodoList({ items, onDeleteTask }) {
 
   
 
-  return (
-    <div className="flex flex-wrap gap-6 mt-4">
-      {categoryOrder.map(category => (
-        <div
-          key={category}
-        className="flex flex-col gap-4 p-4 bg-black rounded-lg shadow w-full sm:w-64 min-h-[150px] border border-gray-500"
-        >
-          <div className={`flex flex-col items-center border-b pb-4 rounded-t-lg ${headerColors[category]}`}>
-            <img
-              src={categoryIcons[category]}
-              alt={`${category} icon`}
-              className="w-12 h-12 mx-auto"
-            />
-            <h2 className="text-lg font-bold text-gray-800 mt-1 text-center">
-              {category}
-            </h2>
-          </div>
-
-          {groupedTasks[category].length > 0 ? (
-            groupedTasks[category].map(task => (
-              <TodoItem key={task.id} task={task} onDelete={onDeleteTask} />
-            ))
-          ) : (
-            <p className="text-sm text-gray-400 text-center italic">No tasks yet</p>
-          )}
+return (
+<div className="grid gap-6 mt-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 overflow-x-hidden">
+    {categoryOrder.map(category => (
+      <div
+        key={category}
+        className="flex flex-col gap-4 p-4 bg-black rounded-lg shadow min-h-[150px] border border-gray-500"
+      >
+        <div className={`flex flex-col items-center border-b pb-4 rounded-t-lg w-full ${headerColors[category]}`}>
+          <img
+            src={categoryIcons[category]}
+            alt={`${category} icon`}
+            className="w-12 h-12 mx-auto"
+          />
+          <h2 className="text-lg font-bold text-gray-800 mt-1 text-center">
+            {category}
+          </h2>
         </div>
-      ))}
-    </div>
-  );
+
+        {groupedTasks[category].length > 0 ? (
+          groupedTasks[category].map(task => (
+            <TodoItem key={task.id} task={task} onDelete={onDeleteTask} />
+          ))
+        ) : (
+          <p className="text-sm text-gray-400 text-center italic">No tasks yet</p>
+        )}
+      </div>
+    ))}
+  </div>
+);
 }
 
 export default TodoList;

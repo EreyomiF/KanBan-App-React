@@ -20,10 +20,10 @@ const LoadingCard = () => {
       </div>
       <div className="w-full flex justify-between items-start">
         <div className="block">
-          <h3 className="h-3 bg-gray-800 rounded-full w-36 mb-3"></h3>
-          <p className="h-2 bg-gray-800 rounded-full w-24 mb-2"></p>
+          <h3 className="h-3 bg-gray-800 rounded-full w-36 md:w-16 mb-3"></h3>
+          <p className="h-2 bg-gray-800 rounded-full w-24 md:w-14 mb-2"></p>
         </div>
-        <span className="h-2 bg-gray-00 rounded-full w-12"></span>
+        <span className="h-2 bg-gray-00 rounded-full w-12 md:w-6 "></span>
       </div>
     </div>
   );
