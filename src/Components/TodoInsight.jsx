@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+import RadialChartImg from '../assets/icons/Chart.png'; // adjust the path as needed
+
 
 const TodoInsight = () => {
   const [showDetails, setShowDetails] = useState(false);
@@ -17,12 +19,12 @@ const TodoInsight = () => {
   }, []);
 
   return (
-    <div className="h-[430px] mt-4 w-full bg-white rounded-lg shadow-sm dark:bg-gray-800 p-4 md:p-6 relative">
+<div className="h-[430px] mt-4 w-full bg-black border-2 border-gray-500 rounded-lg shadow-sm dark:border-gray-600 dark:bg-gray-800 p-4 md:p-6 relative">
       {/* Header */}
       <div className="flex justify-between mb-3">
         <div className="flex items-center">
           <div className="flex justify-center items-center relative">
-            <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white pe-1">
+            <h5 className="text-xl font-bold leading-none text-gray-500 dark:text-white pe-1">
               Your team's progress
             </h5>
             <svg
@@ -43,7 +45,7 @@ const TodoInsight = () => {
       </div>
 
       {/* Progress stats */}
-      <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">
+      <div className="bg-neutral-900 dark:bg-gray-800 p-3 rounded-lg">
         <div className="grid grid-cols-3 gap-3 mb-2">
           <dl className="bg-orange-50 dark:bg-gray-600 rounded-lg flex flex-col items-center justify-center h-[78px]">
             <dt className="w-8 h-8 rounded-full bg-orange-100 dark:bg-gray-500 text-orange-600 dark:text-orange-300 text-sm font-medium flex items-center justify-center mb-1">
@@ -140,7 +142,7 @@ const TodoInsight = () => {
 
       {/* Radial Chart placeholder */}
       <div className="py-6" id="radial-chart">
-        {/* You can integrate your radial chart here using a chart lib */}
+        <img src={RadialChartImg} alt="Radial Chart" className="w-32 h-auto max-w-xs mx-auto" />
       </div>
 
       {/* Bottom controls with dropdown */}

@@ -64,9 +64,33 @@ function TimeHeader() {
     setTime(getFormattedTime());
   }
 
-  return (
-    <div className="p-2 mb-4 rounded-lg mt-20 w-full">
-      <div className="flex flex-row-reverse flex-wrap gap-4 items-center min-w-0">
+return (
+  <div className="p-2 mb-4 rounded-lg mt-20 w-full">
+    <div className="flex items-center justify-between flex-wrap gap-4">
+      
+      {/* === Left Icons === */}
+      <div className="flex gap-4">
+        {[...Array(5)].map((_, i) => (
+          <svg
+            key={i}
+            className="w-6 h-6 text-white dark:text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 0v6M9.5 9A2.5 2.5 0 0 1 12 6.5"
+            />
+          </svg>
+        ))}
+      </div>
+
+      {/* === Time Info Section === */}
+      <div className="flex flex-wrap gap-4 items-center min-w-0">
+
         {/* Location */}
         <div className="flex items-center min-w-0 max-w-xs">
           <svg
@@ -82,11 +106,9 @@ function TimeHeader() {
               d="M12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0 0v6M9.5 9A2.5 2.5 0 0 1 12 6.5"
             />
           </svg>
-        <div className="flex items-center min-w-0 max-w-xs">
           <span className="ml-2 text-sm break-words" title={`${location} ${timezone}`}>
             {location} {timezone && `(${timezone})`}
           </span>
-        </div>
         </div>
 
         {/* Time */}
@@ -122,9 +144,11 @@ function TimeHeader() {
           </svg>
           <span className="ml-2 text-sm">Due date</span>
         </div>
+
       </div>
     </div>
-  );
+  </div>
+);
 }
 
 export default TimeHeader;
