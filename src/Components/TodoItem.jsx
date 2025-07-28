@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const cardBackgrounds = {
   New: "#FFE4E6",
-  Ongoing: "#EDE9FE",
+  Ongoing: "bg-violet-200",
   Completed: "#DCFCE7",
   Old: "#FEF9C3",
 };
